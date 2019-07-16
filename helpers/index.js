@@ -1,7 +1,8 @@
+// user: "pass.reset.req@gmail.com",
+// pass: "zsbj ftmy qamf zjmf"
+
 //////////sendEmail
 const nodeMailer = require("nodemailer");
- 
-const defaultEmailData = { from: "noreply@node-react.com" };
  
 sendEmail = emailData => {
     const transporter = nodeMailer.createTransport({
@@ -10,8 +11,8 @@ sendEmail = emailData => {
         secure: false,
         requireTLS: true,
         auth: {
-            user: "pass.reset.req@gmail.com",
-            pass: "zsbj ftmy qamf zjmf"
+            user: "dart.reminder@gmail.com",
+            pass: "mgon cncb nohh cpeo"
         }
     });
     return (
@@ -28,19 +29,16 @@ sendEmail = emailData => {
 
   var currentDay = new Date();
   var today = currentDay.getDay();
-  // const email = emailList[counter]
+//   const email = emailList[counter]
   const email = 'angelis.vassilis@gmail.com'
-
 
   const emailData={
     from:"noreply@node-react.com",
     to:email,
-    subject: "DART turn reminder",
+    subject: "DART reminder",
     text: "It's your turn to keep an eye on DART requests today",
     html: "<p>It's your turn to keep an eye on DART requests today</p>"
   }
 sendEmail(emailData)
 console.log(counter)
-counter ++
-
 console.log('Email is sent')}

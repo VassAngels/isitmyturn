@@ -13,9 +13,9 @@ const emailList = ['Tim.Andrews@open.ac.uk', 'Vassilis.Angelis@open.ac.uk','Jame
 'Adriano.Perrone@open.ac.uk','Patrick.Sim@open.ac.uk', 'Dale.Singh@open.ac.uk', 'Clem.Whiting@open.ac.uk', 'Richard.Willmoth@open.ac.uk']
 
 
-cron.schedule(' */20 * * * * 1-5', ()=> {
-    scheduler(counter,emailList)
-})
+// cron.schedule(' */20 * * * * 1-5', ()=> {
+//     scheduler(counter,emailList)
+// })
 
 app.listen(process.env.PORT || 8080, ()=>{
     console.log('the app is listening in port 3000')

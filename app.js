@@ -13,7 +13,7 @@ const emailList = ['Tim.Andrews@open.ac.uk', 'Vassilis.Angelis@open.ac.uk','Jame
 'Adriano.Perrone@open.ac.uk','Patrick.Sim@open.ac.uk', 'Dale.Singh@open.ac.uk', 'Clem.Whiting@open.ac.uk', 'Richard.Willmoth@open.ac.uk']
 
 
-cron.schedule(' 6 22 * * 1-5', ()=> {
+cron.schedule(' */30 * 20-24 * * 1-5', ()=> {
     scheduler(counter,emailList)
     counter++
 },{timezone: "Europe/Athens"})

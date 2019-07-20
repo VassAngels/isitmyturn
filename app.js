@@ -13,7 +13,7 @@ var counter = 4;
 
 const emailList = process.env.EMAIL_LIST_2
 
-cron.schedule(' */5 * * * * 1-6', ()=> {
+cron.schedule(' * * * * 1-6', ()=> {
     sendEmail(counter,emailList)
     counter++
 },{timezone: "Europe/London"})

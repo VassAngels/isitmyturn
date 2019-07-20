@@ -1,9 +1,8 @@
-// user: "pass.reset.req@gmail.com",
-// pass: "zsbj ftmy qamf zjmf"
-
-//////////sendEmail
 const nodeMailer = require("nodemailer");
- 
+const  dotenv  =require('dotenv')
+dotenv.config()
+
+
 sendEmail = emailData => {
     const transporter = nodeMailer.createTransport({
         host: "smtp.gmail.com",
@@ -11,8 +10,8 @@ sendEmail = emailData => {
         secure: false,
         requireTLS: true,
         auth: {
-            user: "dart.reminder@gmail.com",
-            pass: "mgon cncb nohh cpeo"
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASSWORD
         }
     });
     return (
@@ -23,14 +22,14 @@ sendEmail = emailData => {
     );
 };
  
- ////////Scheduler
- exports.scheduler = (counter,emailList)=>{
+ 
+ exports.sendEmail = (counter,emailList)=>{
   if (counter===10){counter=0}
 
   var currentDay = new Date();
-  var today = currentDay.getDay();
-  const email = emailList[counter]
-  // const email = 'angelis.vassilis@gmail.com'
+  var emailIndex = currentDay.getDay()-1;
+//   const email = emailList[emailIndex]
+  const email = 'angelis.vassilis@gmail.com'
 
   const emailData={
     from:"noreply@node-react.com",
@@ -40,5 +39,4 @@ sendEmail = emailData => {
     html: "<p>It's your turn to keep an eye on DART requests today</p>"
   }
 sendEmail(emailData)
-console.log(counter)
 console.log('Email is sent')}

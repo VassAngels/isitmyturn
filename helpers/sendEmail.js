@@ -28,8 +28,8 @@ sendEmail = emailData => {
 
   var currentDay = new Date();
   var emailIndex = currentDay.getDay()-1;
-//   const email = emailList[emailIndex]
-  const email = 'angelis.vassilis@gmail.com'
+  const email = emailList[emailIndex]
+//   const email = 'angelis.vassilis@gmail.com'
 
   const emailData={
     from:"noreply@node-react.com",

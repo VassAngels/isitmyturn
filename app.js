@@ -9,9 +9,12 @@ const {sendEmail} = require('./helpers/sendEmail')
 const port = process.env.PORT || 8080;
 const app = new express();
 
-var counter = 4;                        
+var counter = 4;
+EMAIL_LIST_1 = ['Tim.Andrews@open.ac.uk', 'Vassilis.Angelis@open.ac.uk','James.Barnett@open.ac.uk', 'Sara.Grabauskas@open.ac.uk', 'Tushar.Pai@open.ac.uk']
+EMAIL_LIST_2 = ['Adriano.Perrone@open.ac.uk','Patrick.Sim@open.ac.uk', 'Dale.Singh@open.ac.uk', 'Clem.Whiting@open.ac.uk', 'Richard.Willmoth@open.ac.uk']
 
-const emailList = process.env.EMAIL_LIST_2
+
+const emailList = EMAIL_LIST_2
 
 cron.schedule(' 3 7 * * 1-5', ()=> {
     sendEmail(counter,emailList)

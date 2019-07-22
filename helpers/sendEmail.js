@@ -39,4 +39,4 @@ sendEmail = emailData => {
     html: "<p>It's your turn to keep an eye on DART requests today</p>"
   }
 sendEmail(emailData)
-console.log('Email is sent')}
+console.log(`Email is sent to ${email}`)}

@@ -22,14 +22,12 @@ sendEmail = emailData => {
     );
 };
  
- 
  exports.sendEmail = (counter,emailList)=>{
   if (counter===10){counter=0}
 
   var currentDay = new Date();
   var emailIndex = currentDay.getDay()-1;
   const email = emailList[emailIndex]
-//   const email = 'angelis.vassilis@gmail.com'
 
   const emailData={
     from:"noreply@node-react.com",
